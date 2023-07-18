@@ -4,12 +4,13 @@
 if __name__ == '__main__':
 
         import sys
+
         def print_results(statusCodes, fileSize):
             """ Print statistics """
-            printP"File size: {:d}".format(fileSize))
+            print("File size: {:d}".format(fileSize))
             for statusCode, times in sorted(statusCodes.items()):
                 if times:
-                    print("{:s}: {:d}".format(statusCode, times))
+                   print("{:s}: {:d}".format(statusCode, times))
 statusCodes = {"200": 0,
                "301": 0,
                "400": 0,
@@ -26,8 +27,8 @@ statusCodes = {"200": 0,
         """ Read stdin line by line """
         for line in sys.stdin:
             if n_lines != 0 and n_lines % 10 == 0:
-                """ After every 10 lines, print from the beginning """
-                print_results(statusCode, fileSize)
+               """ After every 10 lines, print from the beginning """
+               print_results(statusCodes, fileSize)
             n_lines += 1
             data = line.split()
             try:
@@ -43,4 +44,3 @@ statusCodes = {"200": 0,
         """ Keyboard interruption, print from the beginning """
         print_results(statusCodes, fileSize)
         raise
-
