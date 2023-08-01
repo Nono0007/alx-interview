@@ -12,7 +12,7 @@ def solve(row, column):
 
 def place_queen(q, column, prev_solver):
     solver_queen = []
-        for array in prev_solver:
+    for array in prev_solver:
         for x in range(column):
             if is_safe(q, x, array):
                 solver_queen.append(array + [x])
@@ -46,7 +46,7 @@ def n_queens():
 
     the_queen = init()
     solver = solve(the_queen, the_queen)
-        for array in solver:
+    for array in solver:
         clean = []
         for q, x in enumerate(array):
             clean.append([q, x])
