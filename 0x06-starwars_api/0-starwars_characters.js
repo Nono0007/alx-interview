@@ -15,9 +15,9 @@ request(url, async function (error, response, body) {
           } else {
             resolve(JSON.parse(html).name);
           }
-	});
+        });
       });
-     console.log(res);
+      console.log(res);
     }
   }
 });
