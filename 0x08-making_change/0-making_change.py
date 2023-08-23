@@ -6,7 +6,7 @@ to meet a given amount total.
 """
 
 
-get makeChange(coins, total):
+def makeChange(coins, total):
     count_amount = 0
     count_coins = 0
     if total <= 0:
