@@ -4,11 +4,11 @@
 
 
 def is_prime(n):
-    """ Cecks if a number given n is a prime number """
+    """ Checks if a number given n is a prime number """
     for i in range(2, int(n ** 0.5) + 1):
         if not n % i:
             return False
-        return True
+    return True
 
 
 def calculate_primes(n, primes):
